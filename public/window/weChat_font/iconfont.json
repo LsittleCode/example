@@ -1,0 +1,37 @@
+{
+  "id": "4102829",
+  "name": "weChat",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "22378754",
+      "name": "菜单设置",
+      "font_class": "caidanshezhi",
+      "unicode": "e641",
+      "unicode_decimal": 58945
+    },
+    {
+      "icon_id": "4414967",
+      "name": "微信消息（线性）",
+      "font_class": "weixinxiaoxixianxing",
+      "unicode": "e64a",
+      "unicode_decimal": 58954
+    },
+    {
+      "icon_id": "6243519",
+      "name": "微信朋友圈",
+      "font_class": "weixinpengyouquan",
+      "unicode": "e6e6",
+      "unicode_decimal": 59110
+    },
+    {
+      "icon_id": "9251396",
+      "name": "微信通讯录 (1)",
+      "font_class": "weixintongxunlu",
+      "unicode": "e601",
+      "unicode_decimal": 58881
+    }
+  ]
+}

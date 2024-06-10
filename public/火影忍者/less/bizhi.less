@@ -1,0 +1,45 @@
+//out: ../css/bz.css
+@import 'common';
+body{
+    background-image: url(../images/big_bj.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.container{
+    background: #00000084;
+    width: 100%;
+    height: 100%;
+    overflow: scroll;
+    &::-webkit-scrollbar{
+        width: 0;
+    }
+    ul{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        padding: 30px;
+        flex-wrap: wrap;
+        li{
+            width: 350px;
+            height: 200px;
+            margin: 10px 20px;
+            img{
+         
+                transition: all .3s linear;   
+            }
+        }
+    }
+}
+.msk{
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    transform: translate(-50%,-50%);
+    width: 50%;
+    height:50%;
+    visibility: hidden;
+    background: #000;
+    border-radius: 15px;
+    background-size: cover;
+    transition: all .3s;
+}

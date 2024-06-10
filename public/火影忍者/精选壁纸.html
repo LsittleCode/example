@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/bz.css">
+</head>
+<body>
+    <nav>
+        <i class="logo"></i>
+        <li><a href="index.html">首页</a></li>
+        <li><a href="火影疾风传.html">疾风传</a></li>
+        <li><a href="精选壁纸.html">壁纸</a></li>
+
+    </nav>
+    <div class="container">
+        <ul>
+            <li><img src="./images/01.webp" alt=""></li>
+            <li><img src="./images/02.webp" alt=""></li>
+            <li><img src="./images/03.webp" alt=""></li>
+            <li><img src="./images/04.webp" alt=""></li>
+            <li><img src="./images/05.webp" alt=""></li>
+            <li><img src="./images/06.webp" alt=""></li>
+            <li><img src="./images/07.webp" alt=""></li>
+            <li><img src="./images/08.webp" alt=""></li>
+            <li><img src="./images/09.webp" alt=""></li>
+            <li><img src="./images/10.webp" alt=""></li>
+            <li><img src="./images/11.webp" alt=""></li>
+        </ul>
+        <div class="msk"></div>
+    </div>
+    <script>
+        const All_pics = document.querySelectorAll('.container ul li')
+        const msk = document.querySelector(".msk");
+        All_pics.forEach((item)=>{
+            item.addEventListener('mousemove',function(){
+                msk.style.visibility = 'visible';
+                msk.style.backgroundImage = `url(${this.children[0].src})`;
+                msk.style.left = '50%';
+                msk.style.top = '50%';
+            })
+        })
+        msk.addEventListener('mouseleave',function(){
+            this.style.backgroundImage = '';
+            this.style.visibility = 'hidden';
+            msk.style.left = '0%';
+            msk.style.top = '0%';
+        })
+    </script>
+</body>
+</html>

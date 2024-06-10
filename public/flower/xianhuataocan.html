@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>鲜花套餐</title>
+    <link rel="stylesheet" href="./xianhuataocan.css">
+</head>
+<body>
+    <div class="nav">
+        <div class="box">
+            <a class="logo" href="/"></a>
+            <ul>
+                <li><a href="index.html">首页</a></li>
+                <li><a href="xianhuataocan.html">鲜花套餐</a></li>
+                <li><a href="jiameng.html">大客户通道</a></li>
+                <li><a href="aboutme.html">关于我们</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="head">首页>鲜花</div>
+    <div class="flower_box">
+        <div class="img_modl"></div>
+        <div class="container">
+            <ul>
+               <li>
+                    <div class="top_box">
+                        <img src="images/f1.jpeg" alt="">
+                    </div>
+                    <div class="bottombox">
+                        <h4>Nature自然系列 | 混合版</h4>
+                        <p class="money">¥99</p>
+                        <hr>
+                        <p class="title">99元/4束，每周一束，新用户赠花瓶</p>
+                    </div>
+               </li>
+               <li>
+                    <div class="top_box">
+                        <img src="images/tcmix.jpeg" alt="">
+                    </div>
+                    <div class="bottombox">
+                        <h4>Nature自然系列 | Mix版</h4>
+                        <p class="money">¥99</p>
+                        <hr>
+                        <p class="title">99元/4束，每周一束，单品 & 混合交替发花</p>
+                    </div>
+              </li>
+              <li>
+                    <div class="top_box">
+                        <img src="images/f3.jpeg" alt="">
+                    </div>
+                    <div class="bottombox">
+                        <h4>Nature自然系列 | Pro版</h4>
+                        <p class="money">¥169</p>
+                        <hr>
+                        <p class="title">169元/4束，每周一束，新用户送花瓶</p>
+                    </div>
+             </li>
+             <li>
+                <div class="top_box">
+                    <img src="images/f4.jpeg" alt="">
+                </div>
+                <div class="bottombox">
+                    <h4>即将开售 | 食品专场</h4>
+                    <p class="money">¥99</p>
+                    <hr>
+                    <p class="title">花点食品专场即将开售，敬请期待</p>
+                </div>
+             </li>
+            </ul>
+        </div>
+    </div>
+    <div class="flower_box two">
+        <div class="img_modl"></div>
+        <div class="container">
+            <ul>
+               <li>
+                    <div class="top_box">
+                        <img src="images/diy.jpeg" alt="">
+                    </div>
+                    <div class="bottombox">
+                        <h4>Story主题花 | DIY版</h4>
+                        <p class="money">¥388</p>
+                        <hr>
+                        <p class="title">每束8-10种花材，给你更多新鲜尝试</p>
+                    </div>
+               </li>
+               <li>
+                    <div class="top_box">
+                        <img src="images/story.png" alt="">
+                    </div>
+                    <div class="bottombox">
+                        <h4>Story主题花 | 礼品版</h4>
+                        <p class="money">¥468</p>
+                        <hr>
+                        <p class="title">绿色立式专属礼盒装，馈赠佳品</p>
+                    </div>
+              </li>
+            </ul>
+        </div>
+    </div>
+    <div class="flower_box three">
+        <div class="img_modl"></div>
+        <div class="container">
+            <ul>
+               <li>
+                    <div class="top_box">
+                        <img src="images/hj.png" alt="">
+                    </div>
+                    <div class="bottombox">
+                        <h4>花剪</h4>
+                        <p class="money">¥49</p>
+                        <hr>
+                        <p class="title">49元起，多花些时间在美好上</p>
+                    </div>
+               </li>
+               <li>
+                    <div class="top_box">
+                        <img src="images/hq.png" alt="">
+                    </div>
+                    <div class="bottombox">
+                        <h4>花器</h4>
+                        <p class="money">¥20</p>
+                        <hr>
+                        <p class="title">20元起，好花配好器</p>
+                    </div>
+              </li>
+              <li>
+                <div class="top_box">
+                    <img src="images/xh.png" alt="">
+                </div>
+                <div class="bottombox">
+                    <h4>夏花手账</h4>
+                    <p class="money">¥39</p>
+                    <hr>
+                    <p class="title">39元起，手绘印花本，生如夏花</p>
+                </div>
+          </li>
+          <li>
+            <div class="top_box">
+                <img src="images/zb.png" alt="">
+            </div>
+            <div class="bottombox">
+                <h4>精选周边</h4>
+                <p class="money">¥69</p>
+                <hr>
+                <p class="title">69元起，围巾、抱枕、水杯、盘子</p>
+            </div>
+      </li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="box">
+            <a href="">站点地图 </a>
+            <span>一</span>
+            <a href="">首页</a>
+            <a href="">鲜花套餐</a>
+            <a href="">关于我们</a>
+        </div>
+    </div>
+    <script>
+        const nav = document.querySelector(".nav");
+        window.addEventListener("scroll",function(e){
+            if(document.documentElement.scrollTop > 100){
+                nav.classList.add('scroll')
+            }else{
+                nav.classList.remove('scroll')
+            }
+        })
+    </script>
+</body>
+</html>

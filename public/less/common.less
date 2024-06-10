@@ -1,0 +1,126 @@
+//out:../css/common.css
+@FontSize: 126rem;
+header{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 999;
+    height: (60 / @FontSize);
+    .container-fulld{
+        background: #0000009c;
+        .row{
+            width: 96%;
+            max-width: 96%;
+            height:100%;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-around;
+            .section_bar{
+                display: flex;
+                align-items: center;
+                width: 70%;
+                .logo{
+                    height: 100%;
+                    padding-right: 15px;
+                    a{
+                        display: inline-block;
+                        width: 50px;
+                        height: 50px;
+                        border-radius: 50%;
+                        margin-top: 5px;
+                        overflow: hidden;
+                        img{
+                            width: 100%;
+                        }
+                    }
+                }
+                .header_navbar{
+                    flex: 1;
+                    font-size: 15px;
+                    display: flex;
+                    height: (60 / @FontSize);
+                    line-height: (60 / @FontSize);
+                    .index{
+                        margin-left: (15  / @FontSize);
+                        &:hover{
+                            color: aqua;
+                        }
+                    }
+                    .navbar_box{
+                        display: flex;
+                        flex: 1;
+                        justify-content: space-around;
+                        .navbar_item{
+                            a{
+                                display: block;
+                                padding: 0 (50 / @FontSize);
+                                &:hover{
+                                    color: aqua;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .change-color{
+                
+                display: flex;
+                align-items: center; 
+                justify-content:end;
+                a{
+                    text-decoration: none;
+                    .icon-taiyang{
+                        color: rgb(255, 0, 0) !important;
+                        white-space: nowrap;
+                    }
+                    .icon-yueliang{
+                        color: #fff;
+                    }
+                    .changC{
+                        display: block;
+                        font-size: 28px;
+                        
+                        margin-right: (20 / @FontSize);
+                        animation: rotateTY 2s linear infinite;
+                    }
+                    @keyframes rotateTY {
+                        0%{
+                            transform: rotate(0deg);
+                        }
+                        100%{
+                            transform: rotate(360deg);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.header-bg{
+    background-image: url(../uploads/bg0.jpg);
+    background-position:center;
+    background-size: 100% 160%;
+    background-repeat: no-repeat;
+    height:(412 / @FontSize );
+    position: relative;
+    .title{
+        position: absolute;
+        font-size: 25px;
+        font-weight: 800;
+       
+        white-space: nowrap; color: #fff;
+        left: 50%;
+        bottom: 40%;
+        transform: translateX(-50%) translateY(-50%);
+        word-spacing: (20 / @FontSize);
+    }
+}
+@media screen and(max-width:600px) {
+    .header-bg{
+        max-width: 99%;
+        margin: 0 auto;
+        border-radius: 5px;
+        height: (800 / @FontSize);
+       
+    }
+}

@@ -1,0 +1,139 @@
+@font-face {
+  font-weight: 400;
+  src: url("../iconfont/fontstyle/Alimama_ShuHeiTi_Bold.woff2") format("woff2"), url("../iconfont/fontstyle/Alimama_ShuHeiTi_Bold.woff") format("woff");
+  font-display: swap;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+span,
+a,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "阿里妈妈数黑体 Bold";
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: #090909;
+}
+a:hover {
+  text-decoration: none ;
+}
+img {
+  width: 100%;
+  height: 100%;
+  vertical-align: middle;
+}
+body {
+  height: 100%;
+}
+.item {
+  color: #fff;
+  white-space: nowrap;
+}
+.more {
+  color: #f88989 !important;
+  font-weight: 600;
+  background: #ffffff;
+  display: inline-block;
+  padding: 10px;
+  border-radius: 10px;
+  margin-right: 10px;
+}
+#section_header_xs {
+  transition: all 0.5s linear;
+  position: fixed;
+  top: 7%;
+  left: -50%;
+  background: #0000009c;
+  height: 100%;
+  width: 50%;
+  transform: translateX(-100%);
+  text-align: center;
+}
+#section_header_xs .index {
+  margin-top: 30px;
+  display: inline-block;
+  font-size: 18px;
+}
+#section_header_xs .navbar_item {
+  margin: 50px 10px;
+}
+#section_header_xs .hidde-w {
+  position: absolute;
+  right: 0;
+  top: 30%;
+  font-size: 20px;
+  transform: translate(-50%, 50%);
+  color: #f9f9f9;
+}
+body {
+  background: #b8ead3 !important;
+}
+.clear::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.pics_box {
+  margin-top: 50px;
+  margin-bottom: 100px;
+}
+.pics_box ul li {
+  height: 170px;
+  position: relative;
+  text-align: center;
+  margin-bottom: 30px;
+}
+.pics_box ul li img {
+  height: 90%;
+  box-shadow: 1px 1px 25px #2c3632;
+  border-radius: 10px;
+}
+.pics_box ul li img:hover {
+  animation: roate_pics 1.5s linear infinite alternate;
+}
+@keyframes roate_pics {
+  10% {
+    transform: rotateZ(0deg) scale(1.1);
+  }
+  35% {
+    transform: rotateZ(-8deg) scale(1.1);
+  }
+  75% {
+    transform: rotateZ(0deg) scale(1.1);
+  }
+  100% {
+    transform: rotateZ(8deg) scale(1.1);
+  }
+}
+.pics_box ul li a {
+  margin-top: 10px;
+  display: inline-block;
+  height: 10%;
+  font-size: 12px;
+  background: #c4c0c0ab;
+}
+.pics_box ul li a:hover {
+  text-decoration: none;
+}
+.pics_box .layer {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  width: 90%;
+  height: 80%;
+  border-radius: 20px;
+  display: none;
+  z-index: 9999;
+}

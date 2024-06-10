@@ -1,0 +1,69 @@
+//out:../third/css/index.css
+@import "base";
+@import "mob";
+body{
+    background: #b8ead3 !important;
+}
+
+.clear::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+
+
+// 图片盒子
+.pics_box{
+    margin-top: 50px;
+    margin-bottom: 100px;
+    ul{
+        li{
+            height: 170px;
+            position: relative;
+            text-align: center;
+            margin-bottom: 30px;
+            img{
+                 height: 90%;
+                 box-shadow: 1px 1px 25px #2c3632;
+                 border-radius: 10px;
+                 &:hover{
+                     animation: roate_pics 1.5s linear infinite alternate ;
+                    }
+                    @keyframes roate_pics {
+                         10%{
+                            transform: rotateZ(0deg)  scale(1.1);
+                            }35%{
+                            transform: rotateZ(-8deg) scale(1.1);
+                             }75%{
+                            transform: rotateZ(0deg)  scale(1.1);
+                            }100%{
+                            transform: rotateZ(8deg)  scale(1.1);
+                            }
+                        }
+                }
+                a{
+                    margin-top: 10px;
+                    display: inline-block;
+                    height: 10%;
+                    font-size: 12px;
+                    background: #c4c0c0ab;
+                    &:hover{
+                        text-decoration: none;
+                        
+                    }
+                }
+
+        }
+    }
+    .layer {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+        width: 90%;
+        height: 80%;
+        border-radius: 20px;
+        display: none;
+        z-index: 9999;
+    }
+}

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="jiameng.css">
+</head>
+<body>
+    <div class="nav">
+        <div class="box">
+            <a class="logo" href="/"></a>
+            <ul>
+                <li><a href="index.html">首页</a></li>
+                <li><a href="xianhuataocan.html">鲜花套餐</a></li>
+                <li><a href="jiameng.html">大客户通道</a></li>
+                <li><a href="aboutme.html">关于我们</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="t">首页>线下花店加盟</div>
+    <div class="container">
+        <div class="box">
+            <div class="imgbox"><img src="images/031.jpeg" alt=""></div>
+            <div class="title">
+                <h4>市场前景</h4>
+                <p>踏上一条千亿市场的赚钱之路</p>
+            </div>
+        </div>
+        <div class="box">
+            <div class="imgbox"><img src="images/hx.jpeg" alt=""></div>
+            <div class="title">
+                <h4>核心优势</h4>
+                <p>我们不做最好，我们只做更好</p>
+            </div>
+        </div>
+        <div class="box">
+            <div class="imgbox"><img src="images/fc.jpeg" alt=""></div>
+            <div class="title">
+                <h4>扶持政策</h4>
+                <p>从0到∞，我们始终与您在一起</p>
+            </div>
+        </div>
+        <div class="box">
+            <div class="imgbox"><img src="images/jm.jpeg" alt=""></div>
+            <div class="title">
+                <h4>加盟流程</h4>
+                <p>从这里开启一场悦己幸福的赚钱之旅</p>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="box">
+            <a href="">站点地图 </a>
+            <span>一</span>
+            <a href="">首页</a>
+            <a href="">鲜花套餐</a>
+            <a href="">关于我们</a>
+        </div>
+    </div>
+    <script>
+        const nav = document.querySelector(".nav");
+        window.addEventListener("scroll",function(e){
+            if(document.documentElement.scrollTop > 100){
+                nav.classList.add('scroll')
+            }else{
+                nav.classList.remove('scroll')
+            }
+        })
+    </script>
+</body>
+</html>

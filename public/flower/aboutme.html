@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="aboutme.css">
+</head>
+<body>
+    <div class="nav">
+        <div class="box">
+            <a class="logo" href="/"></a>
+            <ul>
+                <li><a href="index.html">首页</a></li>
+                <li><a href="xianhuataocan.html">鲜花套餐</a></li>
+                <li><a href="jiameng.html">大客户通道</a></li>
+                <li><a href="aboutme.html">关于我们</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="banner"></div>
+    <div class="introduce">
+        <p><img src="./images/introduce.png" alt=""></p>
+        <p><img src="./images/2.png" alt=""></p>
+        <p><img src="./images/3.png" alt=""></p>
+        <p><img src="./images/4.png" alt=""></p>
+    </div>
+    <div class="footer">
+        <div class="box">
+            <a href="">站点地图 </a>
+            <span>一</span>
+            <a href="">首页</a>
+            <a href="">鲜花套餐</a>
+            <a href="">关于我们</a>
+        </div>
+    </div>
+    <script>
+        const nav = document.querySelector(".nav");
+        window.addEventListener("scroll",function(e){
+            if(document.documentElement.scrollTop > 100){
+                nav.classList.add('scroll')
+            }else{
+                nav.classList.remove('scroll')
+            }
+        })
+    </script>
+</body>
+</html>

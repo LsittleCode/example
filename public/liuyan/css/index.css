@@ -1,0 +1,301 @@
+@font-face {
+  font-weight: 400;
+  src: url("../iconfont/fontstyle/Alimama_ShuHeiTi_Bold.woff2") format("woff2"), url("../iconfont/fontstyle/Alimama_ShuHeiTi_Bold.woff") format("woff");
+  font-display: swap;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+span,
+a,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "阿里妈妈数黑体 Bold";
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: #090909;
+}
+a:hover {
+  text-decoration: none ;
+}
+img {
+  width: 100%;
+  height: 100%;
+  vertical-align: middle;
+}
+body {
+  height: 100%;
+}
+.item {
+  color: #fff;
+  white-space: nowrap;
+}
+header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 999;
+  height: 0.47619048rem;
+}
+header .container-fulld {
+  background: #0000009c;
+}
+header .container-fulld .row {
+  width: 96%;
+  max-width: 96%;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+}
+header .container-fulld .row .section_bar {
+  display: flex;
+  align-items: center;
+  width: 70%;
+}
+header .container-fulld .row .section_bar .logo {
+  height: 100%;
+  padding-right: 15px;
+}
+header .container-fulld .row .section_bar .logo a {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-top: 5px;
+  overflow: hidden;
+}
+header .container-fulld .row .section_bar .logo a img {
+  width: 100%;
+}
+header .container-fulld .row .section_bar .header_navbar {
+  flex: 1;
+  font-size: 15px;
+  display: flex;
+  height: 0.47619048rem;
+  line-height: 0.47619048rem;
+}
+header .container-fulld .row .section_bar .header_navbar .index {
+  margin-left: 0.11904762rem;
+}
+header .container-fulld .row .section_bar .header_navbar .index:hover {
+  color: aqua;
+}
+header .container-fulld .row .section_bar .header_navbar .navbar_box {
+  display: flex;
+  flex: 1;
+  justify-content: space-around;
+}
+header .container-fulld .row .section_bar .header_navbar .navbar_box .navbar_item a {
+  display: block;
+  padding: 0 0.3968254rem;
+}
+header .container-fulld .row .section_bar .header_navbar .navbar_box .navbar_item a:hover {
+  color: aqua;
+}
+header .container-fulld .row .change-color {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+header .container-fulld .row .change-color a {
+  text-decoration: none;
+}
+header .container-fulld .row .change-color a .icon-taiyang {
+  color: #ff0000 !important;
+  white-space: nowrap;
+}
+header .container-fulld .row .change-color a .icon-yueliang {
+  color: #fff;
+}
+header .container-fulld .row .change-color a .changC {
+  display: block;
+  font-size: 28px;
+  margin-right: 0.15873016rem;
+  animation: rotateTY 2s linear infinite;
+}
+@keyframes rotateTY {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.header-bg {
+  background-image: url(../uploads/bg0.jpg);
+  background-position: center;
+  background-size: 100% 160%;
+  background-repeat: no-repeat;
+  height: 3.26984127rem;
+  position: relative;
+}
+.header-bg .title {
+  position: absolute;
+  font-size: 25px;
+  font-weight: 800;
+  white-space: nowrap;
+  color: #fff;
+  left: 50%;
+  bottom: 40%;
+  transform: translateX(-50%) translateY(-50%);
+  word-spacing: 0.15873016rem;
+}
+@media screen and (max-width: 600px) {
+  .header-bg {
+    max-width: 99%;
+    margin: 0 auto;
+    border-radius: 5px;
+    height: 6.34920635rem;
+  }
+}
+.more {
+  color: #f88989 !important;
+  font-weight: 600;
+  background: #ffffff;
+  display: inline-block;
+  padding: 10px;
+  border-radius: 10px;
+  margin-right: 10px;
+}
+#section_header_xs {
+  transition: all 0.5s linear;
+  position: fixed;
+  top: 7%;
+  left: -50%;
+  background: #0000009c;
+  height: 100%;
+  width: 50%;
+  transform: translateX(-100%);
+  text-align: center;
+}
+#section_header_xs .index {
+  margin-top: 30px;
+  display: inline-block;
+  font-size: 18px;
+}
+#section_header_xs .navbar_item {
+  margin: 50px 10px;
+}
+#section_header_xs .hidde-w {
+  position: absolute;
+  right: 0;
+  top: 30%;
+  font-size: 20px;
+  transform: translate(-50%, 50%);
+  color: #f9f9f9;
+}
+.header-bg {
+  background-image: url('../uploads/d2.jpg') !important;
+  background-position: center;
+  background-size: 100% 160%;
+  background-repeat: no-repeat;
+}
+textarea:focus {
+  cursor: url('../../uploads/应急食品.cur'), default;
+}
+body {
+  background-image: url(../uploads/xk.gif);
+  height: 100%;
+  cursor: url('../../uploads/倒霉哥.cur'), default;
+}
+.form_mod {
+  width: 100%;
+  height: 400px;
+}
+.form_mod .board {
+  width: 68%;
+  margin: 0 auto;
+  background-image: url(../uploads/board.webp);
+  background-position: center;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  height: 400px;
+  padding: 10px;
+  box-shadow: 2px 2px 30px #998809;
+}
+.form_mod .board .text {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.form_mod .board .text textarea {
+  width: 60%;
+  height: 35%;
+  position: absolute;
+  left: 55%;
+  top: 55%;
+  transform: translate(-50%, -50%);
+  background: #f5f0f000;
+  border: 0;
+  color: #b6e3d3;
+  font-size: 30px;
+  letter-spacing: 4px;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bolder;
+}
+.form_mod .board .text textarea:focus {
+  background: #f5f0f000;
+  outline: 0;
+  color: #f0f0f0;
+}
+.form_mod .board .text button {
+  position: absolute;
+  background: #46e341;
+  font-weight: 600;
+  color: #fff;
+  font-size: 18px;
+  padding: 5px 10px;
+  border: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 7%;
+  border-radius: 10px;
+  transition: all 0.2s;
+}
+.form_mod .board .text button:active {
+  transform: scale(1.1);
+}
+.comment_mod {
+  width: 100%;
+  margin: 50px auto;
+}
+.comment_mod .comment_list {
+  width: 80%;
+  margin: 0 auto;
+}
+.comment_mod .comment_list li {
+  font-size: 21px;
+  border: 2px dotted #7c9e98;
+  padding: 10px;
+  border-radius: 15px;
+  margin: 18px 0;
+  background: #314779ba;
+  box-shadow: 2px 2px 20px #1f15acfe;
+}
+.comment_mod .comment_list li::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.comment_mod .comment_list li .text {
+  float: left;
+  padding-left: 20px;
+  color: #17ecc5;
+  letter-spacing: 2px;
+}
+.comment_mod .comment_list li .time {
+  float: right;
+  padding-right: 10px;
+  color: #dbdb77;
+}

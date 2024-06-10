@@ -1,0 +1,84 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+html,body{
+    width: 100%;
+    height: 100%;
+}
+body{
+    background: #192A34;
+}
+img{
+    width: 100%;
+    height: 100%;
+}
+a{
+    color: #fff;
+}
+
+
+
+.head{
+    background: url(../images/lol.webp);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+.logo{
+    background: #000000b6;
+    width: 400px;
+    margin: 0 auto;
+    text-align: center;
+    color: #F8D227;
+    font-family: "楷体";
+    font-size: 45px;
+}
+.head .logo img{
+    width: 400px;
+    height: 300px;
+}
+.head .logo h3{
+    padding-bottom: 50px;
+    text-shadow: 1px 1px 5px #F8D227;
+}
+
+
+.main{
+    margin-top: 40px;
+    width: 100%;
+    height: 400px;
+    overflow: auto;
+}
+.main::-webkit-scrollbar{
+    width: 0;
+}
+.main .hero_box{
+    display: flex;
+    padding: 20px 50px;
+    flex-wrap: wrap;
+    justify-content:space-between;
+}
+.main .hero_box li{
+    margin: 0 40px;
+    margin-bottom: 15px;
+    text-align: center;
+    width: 8%;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+}
+.main .hero_box li img{
+    height: 78%;
+}
+.main .hero_box li h5{
+    padding: 8px 0;
+}
+.main .hero_box li:hover img{
+    border: 2px solid #126eca;
+}
+.main .hero_box li:hover h5{
+    color: #3cc9e1;
+}

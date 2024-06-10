@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dragon&Eat</title>
+    <link rel="stylesheet" href="./index.css">
+    <link rel="shortcut icon" href="../favicon.png">
+</head>
+<body>
+    <div class="container">
+        <div class="bottom">
+            <div class="di">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <span class="person"></span>
+                <span class="money float_money">
+                    <i></i>
+                </span>
+            </div>
+        </div>
+    </div>
+    <div class="jump_sound">
+        <audio  autoplay  src=""></audio>
+    </div>
+    <audio loop autoplay controls class="bg_sound" src="./voice/bj.mp3"></audio>
+    <audio style="visibility: hidden;" autoplay class="jinbi_sound" src=""></audio>
+   <div class="count"><span class="score">0</span><span>分</span></div>
+    <!-- 波浪 -->
+    <script  src="../js/bolang.js" ></script>
+
+    <script>
+        window.addEventListener("DOMContentLoaded",function(){
+            // 随机云朵
+            function randRL(){
+                const x = Math.floor(Math.random() * 1760);
+                const y = Math.floor(Math.random() * 350);
+                return [x,y];
+            }
+            const container = document.querySelector('.container');
+            for(let i = 0; i< 10; i++ ){
+                const [x,y] = randRL();
+                const yun  = document.createElement('yun');
+                yun.style.top = `${y}px`;
+                yun.style.right = `${x}px`;
+                container.appendChild(yun);
+            }
+            for(let i = 0; i< 10; i++ ){
+                const [x,y] = randRL();
+                const yun  = document.createElement('yun2');
+                yun.style.top = `${y}px`;
+                yun.style.right = `${x}px`;
+                container.appendChild(yun);
+            }
+
+            // 跳跃声音
+            const jump_sound = document.querySelector(".jump_sound audio");
+            // 吃到金币
+            const jinbi_sound = document.querySelector(".jinbi_sound");
+            // 控制小恐龙行动
+            const person = document.querySelector(".person");
+            window.addEventListener("keydown",(e)=>{
+                if(e.key == 'ArrowRight') arrowRight();
+                if(e.key == 'ArrowLeft') arrowLeft();
+                if(e.key == 'ArrowUp') thorttle(jump,0)();
+            })
+
+
+
+            // 移动函数集合
+            function arrowRight(){
+                if(person.getBoundingClientRect().left >= 1707) person.style.left = '1550px';
+                person.style.left = person.getBoundingClientRect().left + 20 + 'px';
+                person.style.transform = 'rotateY(0deg)';
+                
+            }
+            function arrowLeft(){
+                if(person.getBoundingClientRect().left < 0) person.style.left = 0;
+                person.style.left = person.getBoundingClientRect().left - 20 + 'px';
+                person.style.transform = 'rotateY(180deg)';
+                
+            }
+            // 节流
+            function thorttle(fn,t){
+                let timer = null;
+                return function(){
+                    if(!timer){
+                        timer = setTimeout(function(){
+                            fn();
+                            timer = null;
+                        },t);
+                    }
+                }
+            }
+            // 节流优化跳跃      //每次触发jump函数都会判断isJump
+            let isJump = false;
+            function thorttle_jump(fn,t){
+                let timer = null;
+                return function(){
+                    if(!timer){
+                        timer = setTimeout(()=>{
+                            fn();
+                            timer = null;
+                            isJump = false;
+                            jump_sound.src='';
+                        },t)
+                    }
+                }
+            }
+            function down(){
+                person.classList.remove('jump');
+            }
+            function jump(){
+                person.classList.add('jump');
+                if(!isJump){
+                    isJump = true;
+                    jump_sound.src = './voice/jump.mp3';
+                    thorttle_jump(down,1000)();
+                }
+            }
+            
+            let count = 0
+            // 金币触发事件
+            // 获取金币
+            const money = document.querySelector(".money");
+            // 获取计数器
+            const score = document.querySelector(".score");
+            score.innerHTML = count;
+            function eat_money(){
+                score.innerHTML = ++count;
+                jinbi_sound.src = './voice/eat.mp3'
+                money.classList.remove('float_money');
+                money.style.display = "none";
+                setTimeout(function(){
+                    money.classList.add('float_money');
+                    money.style.display = "block";
+                },1000);
+            }
+            setInterval(function(){
+                const x = Math.floor(person.getBoundingClientRect().left) + (person.getBoundingClientRect().width / 2) - Math.floor(money.getBoundingClientRect().left);
+                const y = money.getBoundingClientRect().top - person.getBoundingClientRect().top;
+                if(y < 0 && y > -30  && x< 56 && x >0){    
+                    eat_money();
+                }
+             },120)
+        })
+    </script>
+</body>
+</html>

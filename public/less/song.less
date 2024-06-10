@@ -1,0 +1,284 @@
+//out:../song/css/index.css
+@import url('base');
+@import url('common');
+@import url('mob');
+body{
+    background: #b3def1 !important;
+    height: 100%;
+}
+
+
+
+
+
+
+// info
+.info{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    background: #b3def1;
+    span{
+        font-size: 15px;
+        margin: 10px;
+        padding: 1px;
+        color: #1c0ede;
+        white-space: nowrap;
+        border-radius: 6px;
+    }
+}
+// chose
+.search_music{
+    margin: 50px 0;
+    display: flex;
+    justify-content: space-around;
+    .search_box{
+        width: 100%;
+        position: relative;
+        border: 2px solid #c9d2ef;
+        border-radius: 20px;
+        overflow: hidden;
+        box-shadow: 2px 1px 5px 2px;
+        input{
+            width: 100%;
+            height: 50px;
+            border: 0;
+            background: #b3def1;
+            font-size: 23px;
+            color: #f4efef;
+            text-align: center;
+            font-weight: 600;
+            &:focus{
+                outline: 0;
+            }
+        }
+        .sub{
+            position: absolute;
+            right: 0;
+            top: 0;
+            background: #c8f6a7;
+            border: 0;
+            height: 100%;
+            font-size: 18px;
+            color: rgb(34, 209, 215);
+            font-weight: 600;
+            padding: 0 20px;
+        }
+    }
+   
+}
+
+// music_list
+.music_list{
+    width: 98%;
+    margin: 100px auto;
+    padding: 0 30px;
+    background: #b3def1;
+    box-shadow: 1px 2px 11px 1px;
+    border-radius: 13px;
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    .m_box{
+        text-align: center;
+        color: #4b25e2;
+        margin: 10px 20px;
+        width: 16%;
+        padding: 20px;
+        img{
+           height: 80%;
+           width: 80%;
+            border-radius: 30%;
+            box-shadow: 2px 2px 10px 3px #5197ed;
+        }
+        h2{
+            font-size: 18px;
+            margin: 3px 0;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            white-space: nowrap;
+            color: #141515;
+            margin-top: 15px;
+        }
+        h3{
+            font-size: 16px;
+            margin: 3px 0;
+            color: #141515;
+        }
+    }
+}
+
+
+
+// 播放器样式
+.player{
+    width: 100%;
+    height: 100%;
+    bottom: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+    position: fixed;
+    z-index: 999;
+    background-image: url(../images/daisy.webp);
+    background-size: cover;
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    overflow: scroll;
+    display: none;
+    &::-webkit-scrollbar{
+        width: 0;
+    }
+    .content{
+        width: 100%;
+        height: 100%;
+ 
+        .box{
+            height: 100%;
+        }
+        .left{
+            background: #99a4a3c9;
+            .song_name{
+                color: #ffffff;
+                text-align: center;
+                padding: 20px 0;
+            }
+            .actor_name{
+                color: #ffffff;
+                text-align: center;
+                padding: 30px 0;
+            }
+            .pic_box{
+                width:250px;
+                height: 250px;
+                margin: 100px auto;
+                animation: img_roate 11s linear infinite;
+                animation-play-state: paused;
+                img{
+                    box-shadow: 0px 1px 22px 2px #0f1010;
+                    border-radius: 50%;
+                    overflow: hidden;
+                }
+            }
+            audio{
+                width: 100%;
+                position: absolute;
+                bottom: 10%;
+                z-index: 9999;
+                left: 0;
+            }
+
+            @keyframes img_roate {
+                0%{
+                    transform: rotate(0deg);
+                }
+                100%{
+                    transform: rotate(360deg);
+                }
+            }
+        }
+        .right{
+            background: #99a4a3c9;
+            overflow:scroll;
+            &::-webkit-scrollbar{
+                width: 0;
+            }
+            h1{
+                text-align: center;
+                color: #fb8643;
+                font-weight: bold;
+                font-size: 25px;
+                text-shadow: 0 0  5px ;
+                letter-spacing: 5px;
+            }
+            .comment_box{
+                margin-top: 10px;
+                padding: 10px;
+                padding-left: 50px;
+               li{
+                    background: #f4efef;
+                    letter-spacing: 2px;
+                    display: flex;
+                    align-items: center;
+                    border-radius: 20px;
+                    overflow: hidden;
+                    box-shadow: 1px 1px 7px 0px;
+                    margin-bottom: 15px;
+                    .uLogo{
+                        width: 65px;
+                        height: 65px;
+                        margin-right: 20px;
+                        margin-left: 20px;
+                        border-radius: 50%;
+                        overflow: hidden;
+                    }
+                    .box{
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: end;
+                        flex: 1;
+                        .uname{
+                            color: rgb(232, 93, 65);
+                            font-size: 14px;
+                            padding: 0 5px;
+                            margin-bottom: 4px;
+                            font-weight: 700;
+                        }
+                        .ucomment{
+                            font-size: 12px;
+                            background: #e2dede;
+                            padding: 5px 20px 5px 10px;
+                            margin-bottom: 5px;
+                            color: #464545;
+                            font-weight: 600;
+                            border-radius: 10px;
+                        }
+                        .timeStr{
+                            font-size: 12px;
+                            align-self: end;
+                            padding-right: 30px;
+                            font-weight: 600;
+                            color: #848080;
+                        }
+                    }
+               }
+            }
+        }
+    }
+    .close_win{
+        display: block;
+        color: #0d0c0e;
+        font-size: 30px;
+        position: absolute;
+        left: 30px;
+        top: 8px;
+        font-weight: bolder;
+        cursor: pointer;
+        animation: roate 3s linear  infinite;
+        &:hover{
+            text-decoration: none;
+        }
+        // 关闭按钮旋转
+        @keyframes roate{
+            0%{
+                transform: rotate(0deg);
+            }
+            100%{
+                transform: rotate(360deg);
+            }
+        }
+    }
+}
+
+
+
+
+// 外部播放器
+.outAudio{
+    margin:  -30px 0 -80px 0;
+}
+
+// 波浪高度
+.hans-container{
+    height: 100px !important;
+    z-index: 999;
+}

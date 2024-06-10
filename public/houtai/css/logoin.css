@@ -1,0 +1,124 @@
+@font-face {
+    font-family: "阿里妈妈数黑体 Bold";
+    font-weight: 400;
+    src: url("../iconfont/fontstyle/Alimama_ShuHeiTi_Bold.woff2") format("woff2"), url("../iconfont/fontstyle/Alimama_ShuHeiTi_Bold.woff") format("woff");
+    font-display: swap;
+  }
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  span,
+  a,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "阿里妈妈数黑体 Bold";
+  }
+  li {
+    list-style: none;
+  }
+  a {
+    text-decoration: none;
+    color: #090909;
+  }
+  a:hover {
+    text-decoration: none ;
+  }
+  img {
+    width: 100%;
+    height: 100%;
+    vertical-align: middle;
+  }
+  input{
+    border-radius: 3px;
+    border: 1px solid rgb(234, 185, 185);
+  }
+input:focus{
+    outline: 0;
+}
+
+
+
+
+
+
+
+  body {
+    height: 100%;
+    background: #dbf9e4 !important;
+  }
+  .window{
+    width: 95%;
+  }
+  .right{
+    color: rgb(59, 251, 0) !important;
+    font-size: 18px;
+    font-weight: 800;
+  }
+.content{
+    width: 80%;
+    height: 500px;
+    margin: 180px auto 50px auto;
+    border-radius: 15px;
+    overflow: hidden;
+}
+.content .head{}
+.content .head h1{
+    text-align: center;
+    color: rgb(81, 131, 145);
+    padding: 18px 0 0 0;
+    background: linear-gradient(
+        to right,
+        #ace5ed7d,
+        #5aceed89
+    );
+    margin: 0;
+}
+
+.content table{
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    background: #baf5fa;
+}
+.content table tr td .tips{
+  color: red;
+  font-size: 15px;
+  visibility: hidden;
+}
+.content table input{
+    margin: 30px 0;
+}
+.content .input_table table tr td button{
+    width: 100px;
+    height: 30px;
+    font-size: 18px;
+    font-weight: 800;
+    margin-bottom: 30px;
+    color: #fdfdfd;
+    background: #8befe5;
+    border: none;
+    border-radius: 10px;
+}
+.content .input_table{}
+
+.content .input_table{}
+
+.content .input_table{}
+
+.content .input_table{}
+
+.content .input_table{}
+
+
+
+#fanhui{
+  position: fixed;
+  left: 0;
+  top: 0;
+}
